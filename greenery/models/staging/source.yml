@@ -1,0 +1,33 @@
+version: 2
+
+sources:
+
+  - name: raw # name of the source 
+    schema: public # this is the schema our raw data lives in
+    database: dbt # this is the name of our database
+
+    quoting:
+      database: false
+      schema: false
+      identifier: false
+
+    freshness:
+      warn_after: {count: 24, period: hour}
+      error_after: {count: 48, period: hour}
+
+    tables:
+      - name: users 
+        loaded_at_field: created_at
+        description: Contains our app users
+      - name: events
+        description: Contains events information
+      - name: products
+        description: Contains product information
+      - name: order_items
+        description: Contains ordered product information
+      - name: promos
+        description: Contains promotion information
+      - name: addresses
+        description: contains customer address information
+      - name: orders 
+        description: contains customer orders information
