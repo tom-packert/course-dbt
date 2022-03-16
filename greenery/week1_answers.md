@@ -5,15 +5,15 @@ select count(1) from dbt.dbt_tom_packert.stg_users = 130
 
 ## 2 - On average, how many orders do we receive per hour?
 
-with ordered_time as (
-select 
-  date_trunc('hour',  created_at) as date_hour,
-  count(1) as order_count
-from dbt_tom_packert.stg_orders 
-group by 1 
-)
-select avg(order_count)
-from ordered_time = 7.5208333333333333
+with ordered_time as (  
+select   
+  date_trunc('hour',  created_at) as date_hour,  
+  count(1) as order_count  
+from dbt_tom_packert.stg_orders   
+group by 1   
+)  
+select avg(order_count)  
+from ordered_time = 7.5208333333333333  
 
 ## 3 - On average, how long does an order take from being placed to being delivered?
 
