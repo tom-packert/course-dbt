@@ -3,15 +3,53 @@ version: 2
 models:
   - name: stg_users 
     description: Contains our app users
+    columns:
+      - name: user_id
+        tests:
+        - not_null
+        - unique 
   - name: stg_events
     description: Contains events information
+    columns:
+      - name: event_id
+        tests:
+        - not_null
+        - unique      
   - name: stg_products
     description: Contains product information
+    columns:
+      - name: product_id
+        tests:
+        - not_null
+        - unique      
   - name: stg_order_items
     description: Contains ordered product information
+    columns:
+      - name: order_id
+        tests:
+        - not_null
+        - unique      
   - name: stg_promos
     description: Contains promotion information
+    columns:
+      - name: promo_id
+        tests:
+        - not_null
+        - unique      
   - name: stg_addresses
+    columns:
+      - name: address_id
+        tests:
+        - not_null
+        - unique    
     description: contains customer address information
   - name: stg_orders 
     description: contains customer orders information
+    columns:
+      - name: order_id
+        tests:
+        - not_null
+        - unique
+      - name: quantity
+        tests:
+        - positive_values      
