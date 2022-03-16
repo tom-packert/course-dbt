@@ -16,5 +16,6 @@ SELECT
     tracking_id,
     shipping_service,
     estimated_delivery_at,
+    delivered_at,
     status
 FROM {{ source('raw', 'orders') }}
