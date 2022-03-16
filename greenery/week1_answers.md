@@ -1,10 +1,9 @@
-# Heading level 1
-Short Answers - run in simple browser
+# Short Answers - run in simple browser
 
-1 - How many customers do we have
+## 1 - How many customers do we have
 select count(1) from dbt.dbt_tom_packert.stg_users = 130
 
-2 - On average, how many orders do we receive per hour?
+## 2 - On average, how many orders do we receive per hour?
 
 with ordered_time as (
 select 
@@ -16,7 +15,7 @@ group by 1
 select avg(order_count)
 from ordered_time = 7.5208333333333333
 
-3 - On average, how long does an order take from being placed to being delivered?
+## 3 - On average, how long does an order take from being placed to being delivered?
 
 with order_delivered as (
 select 
@@ -29,7 +28,7 @@ select avg(order_delivery_time) from order_delivered
 
 3.8918032786885246
 
-4 - How many users have only made one purchase? Two purchases? Three+ purchases?
+## 4 - How many users have only made one purchase? Two purchases? Three+ purchases?
 
 with user_orders as (
 select 
@@ -53,7 +52,7 @@ order by 1 asc
 2 28
 3+ 71
 
-5 - On average, how many unique sessions do we have per hour?
+## 5 - On average, how many unique sessions do we have per hour?
 
 with session_hour as (
 select 
