@@ -2,7 +2,7 @@ Week 1 Homework
 
 Repo: https://github.com/tom-packert/course-dbt
 
-Short Answers: https://github.com/tom-packert/course-dbt/Readme.md
+Short Answers: https://github.com/tom-packert/course-dbt/week1_answers.md
 
 Reviewers: @Stephanie Mott @Elisaveta Aleksieva 
 
