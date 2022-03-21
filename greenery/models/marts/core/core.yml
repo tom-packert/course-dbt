@@ -1,0 +1,79 @@
+version: 2
+
+models:
+  - name: dim_users
+    description: Expanded user information
+    columns:
+      - name: user_id
+        description: Unique identifier of the user and primary key for this table
+        tests:
+          - unique
+          - not_null
+      - name: days_since_join
+        description: Number of days that have passed since a member created an account
+        tests:
+          - not_null
+          - positive_values
+  - name: dim_products
+    description: expanded product information
+    columns:
+      - name: product_id
+        description: Unique product id
+        tests:
+          - unique
+          - not_null
+      - name: price
+        description: Product Price
+        tests:
+          - not_null
+          - positive_values
+  - name: dim_promos
+    description: Expanded promotional information
+    columns:
+      - name: promo_name
+        description: Name of the promotion 
+        tests: 
+          - unique
+          - not_null
+      - name: discount
+        description: Discount Percentage
+        tests:
+          - not_null
+          - positive_values
+      - name: status
+        description: Active promotion? active/inactive
+        tests:
+          - accepted_values:
+              values: ['active', 'inactive']
+  - name: fct_orders
+    description: Contains information about orders.
+    columns:
+      - name: order_id
+        description: Unique ID of the order
+        tests:
+          - not_null
+          - unique
+  - name: fct_order_items
+    description: details about products ordered
+    columns:
+      - name: num_items
+        description: Quantity ordered
+        tests:
+          - not_null
+          - positive_values
+  - name: fct_user_orders
+    description: details user lifetime order total
+    columns:
+      - name: lifetime_value
+        description: LIfetime value of orders
+        tests:
+          - not_null
+          - positive_values 
+  - name: fct_user_events
+    description: details about user events
+    columns:
+      - name: num_events
+        description: number of events
+        tests:
+          - not_null
+          - positive_values                   

@@ -6,7 +6,7 @@
 
 SELECT 
     product_id,
-    name,
-    price,
-    inventory
+    name as product_name,
+    price as price,
+    inventory as inventory
 FROM {{ source('raw', 'products') }}
