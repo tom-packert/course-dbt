@@ -1,1 +1,17 @@
+with purchase_events as (
+  select 
+    count(distinct session_guid) as purchase_events
+  from dbt_tom_packert.stg_events
+  where event_type = 'checkout'
+  and order_guid is not null
+),
 
+total_events as (
+  select 
+    count(distinct session_guid) as total_events
+  from dbt_tom_packert.stg_events
+)
+
+select round(a.purchase_events / b.total_events::numeric * 100,2) as conversion_rate
+from 
+purchase_events a, total_events b
