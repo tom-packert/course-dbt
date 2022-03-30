@@ -1,0 +1,19 @@
+version: 2
+
+macros:
+  - name: grant
+    description: Provides abstraction of granting db priv to a role
+    docs:
+      show: true
+    arguments:
+      - name: role
+        description: The name of the role to be applied, need to create the role in DB first with create role rolename
+  - name: positive_values
+    description: Provides check for positive values used in tests
+    docs:
+      show: true
+    arguments:
+      - name: model
+        description: the name of the model to check
+      - name: column_name
+        description: The column to check for positive values
