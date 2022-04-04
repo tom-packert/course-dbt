@@ -44,7 +44,7 @@ Yes
 
 ### if your organization is thinking about using dbt, how would you pitch the value of dbt/analytics engineering to a decision maker at your organization?
 
-We already use DBT for about two years, I shose DBT after readon a lot of Tristan Handy's blog posts. It has improved quite a bit since our initial install.  I need to upgrade our production environment to the 1.0 version.
+We already use DBT for about two years, I chose DBT after reading a lot of Tristan Handy's blog posts. It has improved quite a bit since our initial install.  I need to upgrade our production environment to the 1.0 version.
 
 ### if your organization is using dbt, what are 1-2 things you might do differently / recommend to your organization based on learning from this course?
 
@@ -57,4 +57,4 @@ Changing my thinking about data modeling of making the data models easier to que
 
 ## 3B. Setting up for production / scheduled 
 
-I already have DBT installed on mmy workstation (Windows) and want to setup DBT on my home Mac to work locally.  I am wondering about containerizing DBT like gitpod.io does to get the benefit of containers for managing projects with different versions.
+I already have DBT installed on my workstation (Windows) and want to setup DBT on my home Mac to work locally.  I am wondering about containerizing DBT like gitpod.io does to get the benefit of containers for managing projects with different versions.
