@@ -3,7 +3,9 @@ Post the link to your github repo in this channel. Add a readme file in your rep
 tag your code review partners (we just revealed pairings in your pod channel)
 
 ## answer the following self assessment questions
-## Part 1: Were you able to add snapshots against the orders data? Did you see any data change? Yes - I was expecting to see the snapshots schema in my DBT db and finally realized I needed to scroll down to see the new schema.
+## Part 1: Were you able to add snapshots against the orders data? Did you see any data change? 
+
+Yes - I was expecting to see the snapshots schema in my DBT db and finally realized I needed to scroll down to see the new schema.
 ```
 gitpod /workspace/course-dbt/greenery $ dbt snapshot
 18:23:55  Running with dbt=1.0.2
