@@ -21,7 +21,7 @@ gitpod /workspace/course-dbt/greenery $ dbt snapshot
 18:23:55  Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
 gitpod /workspace/course-dbt/greenery $ 
 ```
-Added a snapshop on Orders
+Added a snapshop on Orders, modified the delivery_update.sql to fire changes and see the effects on the rows in the snapshot
 
 ## Part 2: Were you able to answer the product funnel questions? Yes
 ```
@@ -35,19 +35,24 @@ Total Sessions: 1
 Cart Sessions: .808
 Check Out sessions: .625
 
-## Part 2: Were you able to create an exposure on your product analytics model? Yes
+## Part 2: Were you able to create an exposure on your product analytics model? 
+Yes
 
-Part 3: Add your answer to “Reflection question” 3A if answering (if answering 3B instead, mark N/A)
+## Part 3: Reflection questions -- please answer 3A or 3B, or both!
 
-Reflection: What was most challenging/surprising in completing this week’s project?
-Reflection: Is there anywhere you are still stuck or confused? I copied/pasted the exposures example from the DBT documentation and there were hidden characters in the text that prevented generating docs, had to delete everything and type in clean
+### if your organization is thinking about using dbt, how would you pitch the value of dbt/analytics engineering to a decision maker at your organization?
 
-Reflection: What are you most proud of across the 4 weeks?
-When your partners post their projects, please review it by answering the following questions via a threaded reply on their Slack post (due EOD Monday)
+We already use DBT for about two years, I shose DBT after readon a lot of Tristan Handy's blog posts. It has improved quite a bit since our initial install.  I need to upgrade our production environment to the 1.0 version.
 
-What are 1 or 2 things they did well in the project?
+### if your organization is using dbt, what are 1-2 things you might do differently / recommend to your organization based on learning from this course?
 
-What are 1 or 2 concrete ways they could improve their work?
+Make more use of Macros and Jinja
+create more int and fact tables and less reliance on staging tables
 
-If they indicated that they were stuck and/or want focused feedback please provide responses if you can...
-Any additional thoughts? Feel free to add words of encouragement as well!
+### if you are thinking about moving to analytics engineering, what skills have you picked that give you the most confidence in pursuing this next step?
+
+Changing my thinking about data modeling of making the data models easier to query and less about fancy SQL jumpingjacks
+
+## 3B. Setting up for production / scheduled 
+
+I already have DBT installed on mmy workstation (Windows) and want to setup DBT on my home Mac to work locally.  I am wondering about containerizing DBT like gitpod.io does to get the benefit of containers for managing projects with different versions.
