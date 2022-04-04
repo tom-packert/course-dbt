@@ -17,3 +17,13 @@ macros:
         description: the name of the model to check
       - name: column_name
         description: The column to check for positive values
+  - name: one_hot_encode
+    description: Expands the SQL to handle mulitple event_types -- thanks Jenna
+    docs:
+      show: true
+    arguments:
+      - name: column_name
+        description: The column to check for positive values
+      - name: model_name
+        description: the name of the model to check
+      - name: model_alias

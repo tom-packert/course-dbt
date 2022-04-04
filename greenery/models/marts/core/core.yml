@@ -77,3 +77,11 @@ models:
         tests:
           - not_null
           - positive_values                   
+  - name: int_event_types
+    description: one hot encodes event types 
+  - name: fct_sessions
+    description: one hot encodes event types, one row per session
+  - name: fct_product_sessions
+    description: one row per session per product, with aggregations of events at the session level
+  - name: fct_funnel_sessions
+    description: one row per funnel type
